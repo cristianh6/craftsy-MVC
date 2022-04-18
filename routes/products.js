@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-const {register, login} = require('../controllers/userController');
+const {cart, detail} = require('../controllers/productController');
 /* GET users listing. */
 
-router.get('/register', register);
-router.get('/login', login);
+router.get('/productCart', cart);
+router.get('/productDetail', detail);
 
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
